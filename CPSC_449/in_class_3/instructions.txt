@@ -1,0 +1,9 @@
+Create a module called Sets in the file Sets.hs that exports the following functions: 
+
+isSet :: Eq a => [a] -> Bool  takes a list of arbitrary type (of class Eq) and returns True if it is a set (contains no duplicates) and False if it contains duplicates. 
+toSet :: Eq a => [a] -> [a] takes a list of arbitrary type (of class Eq) and returns a set (a list without any duplicates, order doesn't matter).
+elementOf :: (Eq a, Show a) => a -> [a] -> Either String Bool  returns Right True if the 2nd argument is a set and the first argument is in the second argument; Right False if the 2nd argument is a set and the first argument is not in the second argument; and Left "The 2nd argument is not a set; the element <e> is duplicated." (where <e> is an (any) element that is duplicated in the 2nd argument) if the 2nd argument is not a set.
+intersection :: Eq a => [a] -> [a] -> Maybe [a]  returns Just <v> (where <b> is the intersection of the argument sets if both arguments are proper sets; and Nothing is either argument is not a proper set.
+Your implementation may NOT import any module other than the default Prelude module. Your implementation MAY include auxiliary functions besides the ones listed. Be sure to use the exact module name, file name, function names, and function signatures specified here because your submission will be marked by a program that imports your module. Submit your Sets.hs file to the D2L group dropbox called "Feb1"
+
+Iff there are one or more people absent from your group, you should also submit a text file called "absent.txt" (exactly) which contains a list of the members who are absent. This is a free-text file, so you can include notes an explanations if you like.
